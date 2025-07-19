@@ -20,11 +20,11 @@
       <h1  style="display: flex; align-items: center;float: left;font-size:28px;font-weight: 600;"><a style="display: flex;align-items: center;margin-right:5px;" href="https://github.com/Dhirajcoder7"> <img src="images/logo.jpg" alt="RG Developer Logo" class="logo" /></a> 
         <img src="images/RG.jpg" style="width:40px;margin-right: 2px;" alt="">Developer</h1>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sites">Villas</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#sites" onclick="closeMenu()">Villas</a></li>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul> 
         <div class="toggle" onclick="toggleMenu()">
             <img src="images/menu.png" alt="Menu Icon" />
         </div>
@@ -490,15 +490,33 @@
 </div>
     </section>
     <span id="about"></span>
-    <center>
-      <h1  style="font-size: 2.3rem;padding:1.2rem;color: white;margin-top: 5rem;background-color:rgba(0, 0, 0, 0.637);"><p>About us</p></h1>
-    </center>
-    <section class="relative bg-black text-white overflow-hidden">
-      
+   
+    <section class="relative text-white overflow-hidden">
+      <center>
+        <h1  style="font-size: 2.3rem;padding:1.2rem;color: white;margin-top: 0rem;background-color:rgba(53, 53, 53, 0.849);"><p>About us</p></h1>
+      </center>
       <!-- Background Image -->
       <div class="absolute inset-0">
-        <img src="images/about.jpg" alt="Real Estate Luxury Building" class="w-full h-full object-cover opacity-80">
-      </div>
+  <!-- Gradient Overlay -->
+  <div style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -9;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0, 0, 0, 0.151));
+  "></div>
+
+  <!-- Background Image -->
+  <img 
+    style="position: fixed; top: 0%; z-index: -10;" 
+    src="images/about.jpg" 
+    alt="Real Estate Luxury Building" 
+    class="w-full h-full object-cover opacity-80"
+  >
+</div>
+
     
       <!-- Overlay -->
       <div class="relative z-10 max-w-7xl mx-auto px-6 py-24 lg:py-32 grid md:grid-cols-2 gap-16 items-center">
@@ -677,100 +695,116 @@
               </div>
       
               <!-- nav - start -->
-              <div>
-                <div class="mb-4 font-bold uppercase tracking-widest text-gray-800">Products</div>
-      
-                <nav class="flex flex-col gap-4">
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Overview</a>
-                  </div>
-      
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Solutions</a>
-                  </div>
-      
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Pricing</a>
-                  </div>
-                        
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Customers</a>
-                  </div>
-                </nav>
-              </div>
-              <!-- nav - end -->
-      
-              <!-- nav - start -->
-              <div>
-                <div class="mb-4 font-bold uppercase tracking-widest text-gray-800">Company</div>
-      
-                <nav class="flex flex-col gap-4">
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">About</a>
-                  </div>
-      
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Investor Relations</a>
-                  </div>
-      
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Jobs</a>
-                  </div>
-      
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Press</a>
-                  </div>
-      
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Blog</a>
-                  </div>
-                </nav>
-              </div>
-              <!-- nav - end -->
-      
-              <!-- nav - start -->
-              <div>
-                <div class="mb-4 font-bold uppercase tracking-widest text-gray-800">Support</div>
-      
-                <nav class="flex flex-col gap-4">
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Contact</a>
-                  </div>
-      
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Documentation</a>
-                  </div>
-      
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Chat</a>
-                  </div>
-      
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">FAQ</a>
-                  </div>
-                </nav>
-              </div>
-              <!-- nav - end -->
-      
-              <!-- nav - start -->
-              <div>
-                <div class="mb-4 font-bold uppercase tracking-widest text-gray-800">Legal</div>
-      
-                <nav class="flex flex-col gap-4">
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Terms of Service</a>
-                  </div>
-      
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Privacy Policy</a>
-                  </div>
-      
-                  <div>
-                    <a href="#" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Cookie settings</a>
-                  </div>
-                </nav>
-              </div>
-              <!-- nav - end -->
+            <!-- nav - start -->
+            <div>
+              <div class="mb-4 font-bold uppercase tracking-widest text-gray-800">Properties</div>
+            
+              <nav class="flex flex-col gap-4">
+                <div>
+                  <a href="#villas"
+                    class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Villas</a>
+                </div>
+                <div>
+                  <a href="#flats"
+                    class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Flats</a>
+                </div>
+            
+            
+                <div>
+                  <a href="#commercial"
+                    class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Houses</a>
+                </div>
+            
+                <div>
+                  <a href="#plots"
+                    class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Shops</a>
+                </div>
+              </nav>
+            </div>
+            <!-- nav - end -->
+            
+            <!-- nav - start -->
+            <div>
+              <div class="mb-4 font-bold uppercase tracking-widest text-gray-800">Company</div>
+            
+              <nav class="flex flex-col gap-4">
+                <div>
+                  <a href="#about" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">About
+                    Us</a>
+                </div>
+            
+                <div>
+                  <a href="#team" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Our
+                    Team</a>
+                </div>
+            
+                <div>
+                  <a href="#careers"
+                    class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Careers</a>
+                </div>
+            
+                <div>
+                  <a href="#partners" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Our
+                    Partners</a>
+                </div>
+            
+                <div>
+                  <a href="#news" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">News &
+                    Updates</a>
+                </div>
+              </nav>
+            </div>
+            <!-- nav - end -->
+            
+            <!-- nav - start -->
+            <div>
+              <div class="mb-4 font-bold uppercase tracking-widest text-gray-800">Help</div>
+            
+              <nav class="flex flex-col gap-4">
+                <div>
+                  <a href="#contact"
+                    class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Contact Us</a>
+                </div>
+            
+                <div>
+                  <a href="#buying-guide"
+                    class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Buying Guide</a>
+                </div>
+            
+                <div>
+                  <a href="#financing"
+                    class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Home Loans</a>
+                </div>
+            
+                <div>
+                  <a href="#faq" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">FAQs</a>
+                </div>
+              </nav>
+            </div>
+            <!-- nav - end -->
+            
+            <!-- nav - start -->
+            <div>
+              <div class="mb-4 font-bold uppercase tracking-widest text-gray-800">Legal</div>
+            
+              <nav class="flex flex-col gap-4">
+                <div>
+                  <a href="#terms" class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Terms
+                    & Conditions</a>
+                </div>
+            
+                <div>
+                  <a href="#privacy"
+                    class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Privacy Policy</a>
+                </div>
+            
+                <div>
+                  <a href="#disclaimer"
+                    class="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Disclaimer</a>
+                </div>
+              </nav>
+            </div>
+            <!-- nav - end -->
             </div>
       
             <div class="border-t py-8 text-center text-sm text-gray-400">© 2025 - Present RG Developer. All rights reserved.</div>
