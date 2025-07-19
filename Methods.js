@@ -1,7 +1,16 @@
 function toggleMenu() {
-    const nav = document.getElementById('navLinks');
-    nav.classList.toggle('show');
+  const nav = document.getElementById('navLinks');
+  nav.classList.toggle('show');
 }
+
+function closeMenu() {
+  const nav = document.getElementById('navLinks');
+  // Close only if it's open (has class "show")
+  if (nav.classList.contains('show')) {
+      nav.classList.remove('show');
+  }
+}
+
 function scrollToMore() {
     const targetY = document.body.scrollHeight;
     let currentY = window.scrollY;
