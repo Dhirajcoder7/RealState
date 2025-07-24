@@ -229,15 +229,12 @@
         }
 
         function payViaUPI(event) {
-          
-            // Check if device is mobile
             const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
-
-            if (isMobile) {
-                alert("UPI payment process started on mobile.");
-            } else {
-                alert("Only available on mobile devices,please scan QR");
+            if (!isMobile) {
+                event.preventDefault();  // Prevent UPI app opening on desktop
+                alert("Only available on mobile devices. Please scan the QR.");
             }
+            // On mobile: do nothing — let the UPI link open normally
         }
 
         document
@@ -271,7 +268,7 @@
             ShowPay.style = "display:block";
             Hideform.style = "opacity:0.05 ";
         }
-    
+        ShowPay()
     </script>
 </body>
 
