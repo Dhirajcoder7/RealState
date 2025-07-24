@@ -9,7 +9,6 @@
         body {
             font-family: "Segoe UI", sans-serif;
             background: linear-gradient(to right, #f5f7fa, #c3cfe2);
-
         }
 
         .form-container {
@@ -230,8 +229,7 @@
         }
 
         function payViaUPI(event) {
-            event.preventDefault(); // Prevent link default behavior
-
+          
             // Check if device is mobile
             const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
 
@@ -273,7 +271,7 @@
             ShowPay.style = "display:block";
             Hideform.style = "opacity:0.05 ";
         }
-        // ShowPay()
+    
     </script>
 </body>
 
