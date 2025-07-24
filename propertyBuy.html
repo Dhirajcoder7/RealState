@@ -121,8 +121,8 @@
             color: #555;
         }
 
-        .upi-button {
-            display: inline-block;
+        .upi-link {
+            display: none;
             background: #009688;
             color: white;
             padding: 14px 24px;
@@ -131,6 +131,11 @@
             font-weight: bold;
             text-decoration: none;
             transition: background 0.3s ease;
+        }
+        @media (max-width:450px) {
+            .upi-link{
+                display: inline-block;
+            }
         }
 
         .upi-button:hover {
@@ -213,8 +218,8 @@
         </div>
         <br>
 
-        <a href="upi://pay?pa=tigarsroff79@oksbi&pn=Dhiraj%20Gupta&am=100&cu=INR" onclick="payViaUPI(event)"
-            class="upi-button">Pay via UPI</a>
+        <a class="upi-link" href="upi://pay?pa=tigarsroff79@oksbi&pn=Dhiraj%20Gupta&am=100&cu=INR"
+            onclick="payViaUPI(event)" class="upi-button">Pay via UPI</a>
     </div>
 
     <script>
@@ -227,16 +232,6 @@
                 bhkGroup.style.display = "none";
             }
         }
-
-        function payViaUPI(event) {
-            const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
-            if (!isMobile) {
-                event.preventDefault();  // Prevent UPI app opening on desktop
-                alert("Only available on mobile devices. Please scan the QR.");
-            }
-            // On mobile: do nothing — let the UPI link open normally
-        }
-
         document
             .getElementById("cont-form")
             .addEventListener("submit", function (event) {
