@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Booking</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 500px;
+            background: white;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h1 {
+            text-align: center;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: 500;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 96%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #00aa41;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #038f38;
+        }
+
+        #bhk-group {
+            display: none;
+        }
+
+        .payment-container {
+            display: none;
+            position: fixed;
+            /* Better than absolute for full centering on all screens */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #ffffff;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            transition: all 0.3s ease;
+            z-index: 999;
+            /* Ensure it's above other elements */
+        }
+
+        /* Responsive adjustment for very small screens */
+        @media (max-width: 430px) {
+            .payment-container {
+                max-width: 90%;
+                padding: 20px 15px;
+            }
+        }
+
+        .payment-container h2 {
+            margin-bottom: 20px;
+            color: #00796b;
+        }
+
+        .qr-box {
+            border: 2px dashed #009688;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .qr-box p {
+            color: #555;
+        }
+
+        .upi-button {
+            display: inline-block;
+            background: #009688;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .upi-button:hover {
+            background: #00796b;
+        }
+
+        .bank-icons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .bank-icons div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bank-icons div img {
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Book Your Property</h1>
+
+        <form id="cont-form" action="https://formspree.io/f/xovwqjvp" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" name="name" id="name" required placeholder="Enter your name" />
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="Enter your email" />
+            <label for="location">Location</label>
+            <input type="text" placeholder="Enter Property Location" name="location" id="location" required />
+            <label for="type">Property Type</label>
+            <select name="type" id="type" onchange="toggleBHK()" required>
+                <option value=""> Select Type </option>
+                <option value="Villa">Villa</option>
+                <option value="Flat">Flat</option>
+                <option value="House">House</option>
+                <option value="Land">Land</option>
+            </select>
+            <!-- <label for="property">Select Property</label>
+            <select name="property" id="property" required>
+                <option value="">Select Property</option>
+                <option value="Green Residency">Green Residency</option>
+                <option value="Skyline Villas">Skyline Villas</option>
+                <option value="Palm Heights">Palm Heights</option>
+            </select> -->
+
+
+            <div id="bhk-group">
+                <label for="bhk">BHK Option</label>
+                <select name="bhk" id="bhk">
+                    <option value=""> Select BHK</option>
+                    <option value="1BHK">1 BHK</option>
+                    <option value="2BHK">2 BHK</option>
+                    <option value="3BHK">3 BHK</option>
+                    <option value="4BHK">4 BHK</option>
+                </select>
+            </div>
+            <button type="submit" id="btn">Submit Booking</button>
+        </form>
+    </div>
+
+    <div class="payment-container">
+        <h2 style="display: flex;align-items: center;justify-content: center;gap: 5px;"><img src="images/bank2.jpg"
+                width="35px" alt=""> Pay with Mobile Payment</h2>
+
+        <div class="qr-box">
+            <p>📷 Scan QR Code</p>
+            <img src="images/GPay2.jpg" alt="Scan QR" width="250" height="250" />
+        </div>
+        <div class="bank-icons">
+            <div><img src="images/kotak-logo.jpg" alt=""></div>
+            <div><img src="images/yesbank.png" alt=""></div>
+            <div><img src="images/Bobbank.png" alt=""></div>
+            <div><img src="images/HDFC.png" alt=""></div>
+        </div>
+        <br>
+
+        <a href="#" onclick="payViaUPI(event)" class="upi-button">Pay via UPI</a>
+    </div>
+
+    <script>
+        function toggleBHK() {
+            const type = document.getElementById("type").value.toLowerCase();
+            const bhkGroup = document.getElementById("bhk-group");
+            if (type === "flat" || type === "house") {
+                bhkGroup.style.display = "block";
+            } else {
+                bhkGroup.style.display = "none";
+            }
+        }
+
+        function payViaUPI(event) {
+            event.preventDefault(); // Prevent link default behavior
+
+            // Check if device is mobile
+            const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                // Proceed with UPI payment
+                alert("UPI payment process started on mobile.");
+                // Add your real payment logic here
+            } else {
+                // Show alert on non-mobile devices
+                alert("Only available on mobile devices,please scan QR");
+            }
+        }
+
+        document
+            .getElementById("cont-form")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+                const formData = new FormData(this);
+                fetch(this.action, {
+                    method: this.method,
+                    body: formData,
+                    headers: {
+                        Accept: "application/json",
+                    },
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            document.getElementById("cont-form").reset();
+                            alert("Property Confiremed!");
+                            ShowPay();
+                        } else {
+                            alert("There was an issue with your submission.");
+                        }
+                    })
+                    .catch((error) => {
+                        alert("An error occurred. Please try again.");
+                    });
+            });
+        function ShowPay() {
+            const ShowPay = document.querySelector(".payment-container");
+            const Hideform = document.querySelector(".form-container");
+            ShowPay.style = "display:block";
+            Hideform.style = "opacity:0.05 ";
+        }
+    </script>
+</body>
+
+</html>
