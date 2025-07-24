@@ -139,7 +139,7 @@ h1 {
     }
 
     .property-title {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 
     .property-details {
@@ -148,7 +148,7 @@ h1 {
     }
 
     .property-details div {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .price {
@@ -161,10 +161,10 @@ h1 {
 
     .book-section button {
         padding: 10px 24px;
-        font-size: 1rem;
+        font-size: 1rem;    
     }
 
-    .backBtn {
+    /* .backBtn {
         width: 35px;
         height: 35px;
         left: 5px;
@@ -174,5 +174,5 @@ h1 {
     .backBtn img {
         width: 33px;
         height: 33px;
-    }
+    } */
 }
