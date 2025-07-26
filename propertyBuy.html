@@ -14,7 +14,7 @@
         .form-container {
             max-width: 500px;
             background: white;
-            margin: 3rem auto;
+            margin: 5rem auto;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -96,7 +96,7 @@
             }
 
             body {
-                padding: 5px;
+                padding: 0px;
             }
 
             .form-container {
@@ -132,8 +132,9 @@
             text-decoration: none;
             transition: background 0.3s ease;
         }
+
         @media (max-width:450px) {
-            .upi-link{
+            .upi-link {
                 display: inline-block;
             }
         }
@@ -163,34 +164,26 @@
     <div class="form-container">
         <h1>Book Your Property</h1>
 
-        <form id="cont-form" action="https://formspree.io/f/xovwqjvp" method="POST">
+        <form id="cont-form" action="https://usebasin.com/f/1bcb50ac95ff" method="POST">
             <label for="name">Your Name</label>
-            <input type="text" name="name" id="name" required placeholder="Enter your name" />
+            <input type="text" name="Property Owner" id="name" required placeholder="Enter your name" />
 
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" required placeholder="Enter your email" />
+            <input type="email" name="Email-Id" id="email" required placeholder="Enter your email" />
             <label for="location">Location</label>
-            <input type="text" placeholder="Enter Property Location" name="location" id="location" required />
+            <input type="text" placeholder="Enter Property Location" name="Location" id="location" required />
             <label for="type">Property Type</label>
-            <select name="type" id="type" onchange="toggleBHK()" required>
+            <select name="Property Type" id="type" onchange="toggleBHK()" required>
                 <option value=""> Select Type </option>
                 <option value="Villa">Villa</option>
                 <option value="Flat">Flat</option>
                 <option value="House">House</option>
                 <option value="Land">Land</option>
             </select>
-            <!-- <label for="property">Select Property</label>
-            <select name="property" id="property" required>
-                <option value="">Select Property</option>
-                <option value="Green Residency">Green Residency</option>
-                <option value="Skyline Villas">Skyline Villas</option>
-                <option value="Palm Heights">Palm Heights</option>
-            </select> -->
-
-
-            <div id="bhk-group">
+            
+               <div id="bhk-group">
                 <label for="bhk">BHK Option</label>
-                <select name="bhk" id="bhk" required >
+                <select name="bhk" id="bhk" >
                     <option value=""> Select BHK</option>
                     <option value="1BHK">1 BHK</option>
                     <option value="2BHK">2 BHK</option>
@@ -223,17 +216,21 @@
     </div>
 
     <script>
-        function toggleBHK() {
-            const type = document.getElementById("type").value.toLowerCase();
-            const bhkGroup = document.getElementById("bhk-group");
-            if (type === "flat" || type === "house") {
-                bhkGroup.style.display = "block";
-            } else {
-                bhkGroup.style.display = "none";
-            }
-        }
-        document
-            .getElementById("cont-form")
+       function toggleBHK() {
+    const type = document.getElementById("type").value.toLowerCase();
+    const bhkGroup = document.getElementById("bhk-group");
+    const bhkField = document.getElementById("bhk"); // assume select input with id="bhk"
+
+    if (type === "flat" || type === "house") {
+        bhkGroup.style.display = "block";
+        bhkField.setAttribute("required", "required");
+    } else {
+        bhkGroup.style.display = "none";
+        bhkField.removeAttribute("required");
+    }
+}
+        
+     document.getElementById("cont-form")
             .addEventListener("submit", function (event) {
                 event.preventDefault();
                 const formData = new FormData(this);
@@ -263,7 +260,7 @@
             ShowPay.style = "display:block";
             Hideform.style = "opacity:0.05 ";
         }
-     
+        // ShowPay()
     </script>
 </body>
 
