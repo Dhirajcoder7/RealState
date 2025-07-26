@@ -129,7 +129,7 @@
       "image": "https://dynamic.realestateindia.com/prop_images/589205/596562_1-200x200.jpg",
       "bedrooms": 4,
       "bathrooms": 3,
-       "link": "https://example.com/property/6" 
+       "link": "Houses/house1.html" 
     },
      {
     "id":2,
@@ -142,7 +142,7 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "image": "https://hanureddyrealty.com/wp-content/uploads/725777_PHOTO-2022-08-18-12-14-24_3.jpg",
-     "link": "https://example.com/property/6" 
+    "link": "Houses/house2.html" 
   },
   {
     "id":3,
@@ -156,7 +156,7 @@
     "bathrooms": 3,
     "image": "https://teja12.kuikr.com/is/a/c/880x425/gallery_images/original/cf6527790c3b552.gif",
     
-     "link": "https://example.com/property/6" 
+    "link": "Houses/house3.html" 
   },
   {
     "id":4,
@@ -169,7 +169,7 @@
     "bedrooms": 5,
     "bathrooms": 5,                
     "image": "https://img.staticmb.com/mbimages/project/Photo_h310_w462/2019/09/27/Project-Photo-12-Kalpataru-Vista-Noida-5115835_545_1050_310_462.jpg",
-     "link": "https://example.com/property/6" 
+    "link": "Houses/house4.html" 
   },
   {
     "id": 5,
@@ -182,7 +182,7 @@
     "bedrooms": 4,
     "bathrooms": 4,
     "image": "https://www.preetidevelopers.com/img/typologyBanner1.jpg",
-     "link": "https://example.com/property/6" 
+    "link": "Houses/house5.html" 
   },
   {
     "id": 6,
@@ -194,7 +194,8 @@
     "status": "Under Construction",
     "bedrooms": 6,
     "bathrooms": 6,
-    "image": "https://www.chennaidreamhomes.com/wp-content/uploads/2024/04/Type1-villas-850x570.jpg" 
+    "image": "https://www.chennaidreamhomes.com/wp-content/uploads/2024/04/Type1-villas-850x570.jpg" ,
+    "link": "Houses/house6.html" 
   },  
   {
     "id": 0,
@@ -206,7 +207,7 @@
     "status": "Under Construction",
     "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/40/ba/3c/connaught-place.jpg?w=900&h=500&s=1",
     "purpose": "Lease",
-     "link": "https://example.com/property/6" 
+     "link": "moreInfo.html" 
   },
     {
       "id": 1,
@@ -218,7 +219,7 @@
       "status": "Available",
       "image": "https://www.scai.in/wp-content/uploads/2019/01/CCSL-2.jpg",
       "purpose": "Rent",
-       "link": "https://example.com/property/6" 
+       "link": "moreInfo.html" 
     },
     {
       "id": 3,
@@ -230,7 +231,7 @@
     "status": "Available",
     "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Mall_R_deccan_in_pune_by_vaibhav_rane.JPG",
     "purpose": "Rent",
-     "link": "https://example.com/property/6" 
+     "link": "moreInfo.html" 
   },
   {
     "id": 4,
@@ -242,7 +243,7 @@
     "status": "Ready to Move",
     "image": "https://www.holidify.com/images/cmsuploads/compressed/fashion-steet_20180404132132.jpg",
     "purpose": "Sale",
-     "link": "https://example.com/property/6" 
+     "link": "moreInfo.html" 
   },
   {
     "id": 5,
@@ -254,7 +255,7 @@
     "status": "Ready to Move",
     "image": "https://www.indiaretailing.com/wp-content/uploads/2019/05/Trendig-Format.jpg",
     "purpose": "Sale",
-     "link": "https://example.com/property/6" 
+     "link": "moreInfo.html" 
   },
 
   {
@@ -267,7 +268,7 @@
   "status": "Available",
   "image": "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2024-06/BeFunky-collage%20%281%29_6.jpg",
   "purpose": "Sale",
-   "link": "https://example.com/property/6" 
+   "link": "moreInfo.html" 
   },
   {
     "id": 1,
@@ -279,7 +280,7 @@
     "status": "Available",
     "image": "https://media.istockphoto.com/id/1316579633/photo/scenic-aerial-view-of-the-seine-river-and-green-fields-in-french-countryside.jpg?s=612x612&w=0&k=20&c=N3vnKVAZg8c4GIuG9KJ4HO5ipNheRDjJfIT9veYe3xE=",
     "purpose": "Sale",
-     "link": "https://example.com/property/6" 
+     "link": "moreInfo.html" 
   },
   {
     "id": 2,
@@ -291,7 +292,7 @@
     "status": "Available",
     "image": "https://imgs.nestimg.com/residential_plot_in_sector_36_for_resale_noida_the_reference_number_is_17432234_6370006748859021729.jpg ",
     "purpose": "Sale",
-     "link": "https://example.com/property/6" 
+     "link": "moreInfo.html" 
   },
 
   
@@ -305,7 +306,7 @@
     "status": "Available",
     "image": "https://www.shutterstock.com/image-photo/aerial-showing-parcel-land-sale-600nw-2258643801.jpg",
     "purpose": "Sale",
-     "link": "https://example.com/property/6" 
+     "link": "moreInfo.html" 
   },
     {
     "id": 4,
@@ -317,7 +318,7 @@
     "status": "Available",
     "image": "https://3.imimg.com/data3/AQ/FX/MY-6602373/com1690_allhomesale__10912100144-250x250.jpg",
     "purpose": "Sale",
-    "link": "https://example.com/property/7"
+    "link": "moreInfo.html"
   }
   
   
