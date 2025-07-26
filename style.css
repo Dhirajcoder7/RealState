@@ -1,4 +1,4 @@
-
+    
 * {
     margin: 0;
     padding: 0;
@@ -58,9 +58,9 @@ body{
     bottom: 0;
     left: 50%;
     width: 0;
-    height: 2px;
+    height: 3px;
     border-radius:50px;
-    background-color: #1797ff;
+    background-color: #004c8b;
     transform: translateX(-50%);
     transition:0.3s ease;
     
@@ -293,7 +293,7 @@ body{
 .property-price {
     font-weight: 700;
     font-size: 1.25rem;
-    color: #ff1a1a;
+    color: #0e9302;
 }
 
 .btn-view {
@@ -330,11 +330,7 @@ body{
    }
 }
 @media (max-width:480px) {
-    .property-card-container{
-        grid-template-columns: 1fr;
-        padding: 0px;
-        gap: 30px;
-    }
+   
     .iframe{
         height:300px;        
     }
@@ -343,7 +339,7 @@ body{
         padding-right: 25px;
     }
     .property-card{
-        width: 335px;
+        width: 345px;
     }
     .property-title {
         font-size: 1.5rem;
@@ -429,6 +425,10 @@ body{
     .about-text h1 {
         font-size: 24px;
     }
+    .property-card-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -458,6 +458,14 @@ body{
 
     .about {
         font-size: 20px;
+    }
+    .home-page{
+        height:83vh;
+    }
+    .property-card-container{
+        grid-template-columns: 1fr;
+        padding: 0px;
+        gap: 30px;
     }
 
     .about-text h1 {
