@@ -166,8 +166,8 @@
     "location": "Sector 62, Noida",     
     "area_sqft": 3200,
     "status": "Ready to Move",
-    "bedrooms": 5,
-    "bathrooms": 5,                
+    "bedrooms": 4,
+    "bathrooms": 2,                
     "image": "https://img.staticmb.com/mbimages/project/Photo_h310_w462/2019/09/27/Project-Photo-12-Kalpataru-Vista-Noida-5115835_545_1050_310_462.jpg",
     "link": "Houses/house4.html" 
   },
@@ -193,12 +193,95 @@
     "area_sqft": 4500,
     "status": "Under Construction",
     "bedrooms": 6,
-    "bathrooms": 6,
+    "bathrooms": 4,
     "image": "https://www.chennaidreamhomes.com/wp-content/uploads/2024/04/Type1-villas-850x570.jpg" ,
     "link": "Houses/house6.html" 
   },  
+   
+  {  "id":7,
+    "type": "Home",
+    "title": "Modern 4 BHK Duplex Home with Terrace",
+    "price": "1,85,00,000",
+    "location": "Pune, Baner",
+    "area_sqft": 2800,
+    "status": "Ready to Move",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "image": "https://img.staticmb.com/mbimages/project/Photo_h310_w462/Project-Photo-1-Skyi-Aquila-Pune-5002295_488_1366_310_462.jpg",
+    "link": "Houses/house4.html"
+  }
+  ,
+  {   "id":8,
+    "type": "Home",
+    "title": "3 BHK Classic Bungalow with Lawn",
+    "price": "1,60,00,000",
+    "location": "Jaipur, Vaishali Nagar",
+    "area_sqft": 2400,
+    "status": "Ready to Move",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "image": "https://cloudimage.homeonline.com/1280x433/public/uploads/project/images/elevation/mobile/lightbox/a48f1fe7c97e17c753ad7c25aea1669e.jpg",
+    "link": "Houses/house5.html"
+  },
+
+  {  "id":9,
+    "type": "Home",
+    "title": "2 BHK Compact Home Ideal for Small Family",
+    "price": "85,00,000",
+    "location": "Nagpur, Wardha Road",
+    "area_sqft": 1400,
+    "status": "Under Construction",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "image": "https://imagecdn.99acres.com/media1/30501/19/610039129M-1750527870304.webp",
+    "link": "Houses/house7.html"
+  }  
+  ,
   {
-    "id": 0,
+    "id": 10,
+    "type": "Home",
+    "title": "Elegant 5 BHK Corner House with Parking",
+    "price": "2,10,00,000",
+    "location": "Ahmedabad, Bopal",
+    "area_sqft": 3100,
+    "status": "Ready to Move",
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "image": "https://www.addressofchoice.com/aoc_assets/elevation/67510/1648533930_e1.jpeg",
+    "link": "Houses/house8.html"
+  }
+  ,
+  {
+    "id": 11,
+    "type": "Home",
+    "title": "2 BHK Eco-Friendly Smart Home",
+    "price": "95,00,000",
+    "location": "Kochi, Kakkanad",
+    "area_sqft": 1500,
+    "status": "New Launch",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "image": "https://keralarealestate.com/image/lg/property/property/2020/07/03/101549398/images/whatsapp-image-2020-07-03-at-112802-am.jpeg",
+    "link": "Houses/house9.html"
+  }
+  ,
+  {
+    "id": 12,
+    "type": "Home",
+    "title": "Heritage 4 BHK Family Home with Courtyard",
+    "price": "1,45,00,000",
+    "location": "Mysuru, JP Nagar",
+    "area_sqft": 2600,
+    "status": "Ready to Move",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "image": "https://i.ytimg.com/vi/rW94bksfS7g/maxresdefault.jpg",
+    "link": "Houses/house10.html"
+  }
+  
+  ,
+  {
+    "id": 1,
     "type": "Shop",
     "title": "Showroom Shop",
     "price": "1,30,00,000",
@@ -210,7 +293,7 @@
      "link": "moreInfo.html" 
   },
     {
-      "id": 1,
+      "id": 2,
       "type": "Shop",
       "title": "Retail Shop",
       "price": "1,44,64814",
@@ -225,7 +308,7 @@
       "id": 3,
     "type": "Shop",
     "title": "Retail Shop in Mall",
-    "price": "5,65,000",
+    "price": "9,65,000",
     "location": "MG Road, Pune",
     "area_sqft": 950,
     "status": "Available",
@@ -249,7 +332,7 @@
     "id": 5,
     "type": "Shop",
     "title": "Mall Kiosk Shop",
-    "price": "1,85,00,000",
+    "price": "1,45,00,000",
     "location": "Andheri, Mumbai",
     "area_sqft": 600,
     "status": "Ready to Move",
@@ -259,7 +342,7 @@
   },
 
   {
-  "id": 2,
+  "id": 6,
   "type": "Shop",
   "title": "Commercial Showroom Space",
   "price": "1,85,00000",
