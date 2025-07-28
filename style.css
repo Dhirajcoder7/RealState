@@ -58,9 +58,9 @@ body{
     bottom: 0;
     left: 50%;
     width: 0;
-    height: 3px;
+    height: 2.3px;
     border-radius:50px;
-    background-color: #004c8b;
+    background-color: #303030;
     transform: translateX(-50%);
     transition:0.3s ease;
     
@@ -702,4 +702,26 @@ body{
         height: 170px;
         font-size: 1rem;
     }
+}
+
+.review-btn{
+    position: relative;
+    bottom: 40px;
+    border: 1px solid gray;
+    padding:10px;
+    margin: 1rem;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    background:rgba(55, 56, 69, 1);
+    display: inline-block;
+    transition: 0.2s;
+}
+.review-btn:hover{
+    color: black;
+    background-color: #c4c9c8;
+}
+.review-btn:active{
+    transform: scale(0.95);
+    
 }
