@@ -135,7 +135,13 @@ h1 {
 /* Responsive for small devices */
 @media (max-width: 480px) {
     body {
-        padding:20px 0px 0px;
+        padding: 20px 0 0;
+        margin: 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
     }
 
     .property-title {
