@@ -135,11 +135,15 @@ h1 {
 /* Responsive for small devices */
 @media (max-width: 480px) {
     body {
-    padding: 10px 0 0 0;
+        padding:10px 0px 0px;
     }
 
     .property-title {
         font-size: 1.9rem;
+    }
+    .property-card{
+        position:relative;
+        bottom: 0;
     }
 
     .property-details {
