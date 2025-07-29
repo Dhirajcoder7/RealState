@@ -135,7 +135,7 @@ h1 {
 /* Responsive for small devices */
 @media (max-width: 480px) {
     body {
-        padding: 0px 0px;
+        padding-top:10px
     }
 
     .property-title {
