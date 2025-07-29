@@ -284,75 +284,100 @@
     "id": 1,
     "type": "Shop",
     "title": "Showroom Shop",
-    "price": "1,30,00,000",
+    "price": "1,80,000/month",
     "location": "Connaught Place, Delhi",
     "area_sqft": 1500,
     "status": "Under Construction",
     "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/40/ba/3c/connaught-place.jpg?w=900&h=500&s=1",
     "purpose": "Lease",
-     "link": "moreInfo.html" 
+    "link": "shops/shop1.html"
   },
-    {
-      "id": 2,
-      "type": "Shop",
-      "title": "Retail Shop",
-      "price": "1,44,64814",
-      "location": "Salt Lake, Kolkata",
-      "area_sqft": 1503,
-      "status": "Available",
-      "image": "https://www.scai.in/wp-content/uploads/2019/01/CCSL-2.jpg",
-      "purpose": "Rent",
-       "link": "moreInfo.html" 
-    },
-    {
-      "id": 3,
+  {
+    "id": 2,
+    "type": "Shop",
+    "title": "Retail Shop",
+    "price": "95,000/month",
+    "location": "Salt Lake, Kolkata",
+    "area_sqft": 1503,
+    "status": "Available",
+    "image": "https://www.scai.in/wp-content/uploads/2019/01/CCSL-2.jpg",
+    "purpose": "Lease",
+    "link": "shops/shop2.html"
+  },
+  {
+    "id": 3,
     "type": "Shop",
     "title": "Retail Shop in Mall",
-    "price": "9,65,000",
+    "price": "75,000/month",
     "location": "MG Road, Pune",
     "area_sqft": 950,
     "status": "Available",
     "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Mall_R_deccan_in_pune_by_vaibhav_rane.JPG",
-    "purpose": "Rent",
-     "link": "moreInfo.html" 
-  },
+    "purpose": "Lease",
+    "link": "shops/shop3.html"
+  }
+  ,
   {
     "id": 4,
     "type": "Shop",
     "title": "Street-Facing Shop",
-    "price": "18,00000",
+    "price": "1,00,000/month",
     "location": "Bandra, Mumbai",
     "area_sqft": 1200,
     "status": "Ready to Move",
     "image": "https://www.holidify.com/images/cmsuploads/compressed/fashion-steet_20180404132132.jpg",
-    "purpose": "Sale",
-     "link": "moreInfo.html" 
+    "purpose": "Lease",
+    "link": "shops/shop4.html"
   },
   {
     "id": 5,
     "type": "Shop",
     "title": "Mall Kiosk Shop",
-    "price": "1,45,00,000",
+    "price": "60,000/month",
     "location": "Andheri, Mumbai",
     "area_sqft": 600,
     "status": "Ready to Move",
     "image": "https://www.indiaretailing.com/wp-content/uploads/2019/05/Trendig-Format.jpg",
-    "purpose": "Sale",
-     "link": "moreInfo.html" 
+    "purpose": "Lease",
+    "link": "shops/shop5.html"
   },
-
   {
-  "id": 6,
-  "type": "Shop",
-  "title": "Commercial Showroom Space",
-  "price": "1,85,00000",
-  "location": "Connaught Place, Delhi",
-  "area_sqft": 1700,
-  "status": "Available",
-  "image": "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2024-06/BeFunky-collage%20%281%29_6.jpg",
-  "purpose": "Sale",
-   "link": "moreInfo.html" 
+    "id": 6,
+    "type": "Shop",
+    "title": "Commercial Showroom Space",
+    "price": "2,10,000/month",
+    "location": "Connaught Place, Delhi",
+    "area_sqft": 1700,
+    "status": "Available",
+    "image": "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2024-06/BeFunky-collage%20%281%29_6.jpg",
+    "purpose": "Lease",
+    "link": "shops/shop6.html"
   },
+  {
+    "id": 7,
+    "type": "Shop",
+    "title": "Retail Shop in Premium Mall",
+    "price": "85,000/month",
+    "location": "Sector 18, Noida",
+    "area_sqft": 950,
+    "status": "Available",
+    "image": "https://housepincode.com/wp-content/uploads/2024/11/maxresdefault.jpg",
+    "purpose": "Lease",
+    "link": "shops/shop7.html"
+  },
+  {
+    "id": 8,
+    "type": "Shop",
+    "title": "Corner Shop in Busy Market",
+    "price": "70,000/month",
+    "location": "Lajpat Nagar, Delhi",
+    "area_sqft": 700,
+    "status": "Available",
+    "image": "https://res.cloudinary.com/purnesh/image/upload/f_auto/v1519389713/amar-colony-header.jpg",
+    "purpose": "Lease",
+    "link": "shops/shop8.html"
+  }
+,
   {
     "id": 1,
     "type": "Land",
@@ -363,7 +388,7 @@
     "status": "Available",
     "image": "https://media.istockphoto.com/id/1316579633/photo/scenic-aerial-view-of-the-seine-river-and-green-fields-in-french-countryside.jpg?s=612x612&w=0&k=20&c=N3vnKVAZg8c4GIuG9KJ4HO5ipNheRDjJfIT9veYe3xE=",
     "purpose": "Sale",
-     "link": "moreInfo.html" 
+     "link": "Land/land1.html" 
   },
   {
     "id": 2,
