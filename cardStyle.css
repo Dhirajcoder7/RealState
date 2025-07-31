@@ -146,16 +146,19 @@ h1 {
         overflow-x: hidden;
     }
 
-        .image-wrapper {
-            height: 16rem;
+     .image-wrapper {
+          height: 16rem;
         }
     
-        .image-wrapper img {
-              width: 100%;
+     .image-wrapper img {
+          width: 100%;
         }
 
     .property-title {
         font-size: 1.9rem;
+    }
+    .property-card{
+        border-radius:none;
     }
 
     .property-details {
