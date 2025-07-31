@@ -145,12 +145,18 @@ h1 {
         align-items: center;
         overflow-x: hidden;
     }
-    .image-wrapper{
-        height: 15rem;
-    }
-    .image-wrapper img{
-        height: 100%;
-    }
+
+        .image-wrapper {
+            height: 16rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .image-wrapper img {
+            height: 100%;
+            object-fit: contain;
+        }
 
     .property-title {
         font-size: 1.9rem;
