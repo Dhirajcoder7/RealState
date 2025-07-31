@@ -148,15 +148,12 @@ h1 {
 
         .image-wrapper {
             height: 16rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            border-radius:none
         }
     
         .image-wrapper img {
               height: 100%;
               width: 100%;
-              object-fit: cover; 
         }
 
     .property-title {
