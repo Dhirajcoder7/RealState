@@ -223,5 +223,6 @@ const cardSlider = document.getElementById('cardSlider');
 
 // ------------Login Page------------
 function Loginpage() {
-  window.location.href = "login.html";
+  window.location.href = "Login.html";
 }
+
