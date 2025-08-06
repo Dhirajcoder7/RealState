@@ -218,11 +218,10 @@ const cardSlider = document.getElementById('cardSlider');
 
         nextBtn.addEventListener('click', () => {
             cardSlider.scrollBy({ left: cardWidth, behavior: 'smooth' });
-
         });
+
 
 // ------------Login Page------------
 function Loginpage() {
   window.location.href = "Login.html";
 }
-
