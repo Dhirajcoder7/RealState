@@ -10,7 +10,7 @@ html {
     scroll-behavior: smooth;
 }
 body{
-    background: linear-gradient(to bottom, rgba(1, 0, 31, 0.514), rgba(5, 13, 24, 0.466)),
+    background: linear-gradient(to bottom, rgba(1, 0, 31, 0.514), rgba(5, 13, 24, 0.274)),
             url('images/about.jpg');
         background-size: cover;
         background-repeat: no-repeat;
@@ -39,6 +39,7 @@ body{
 }
 .nav-links {
     list-style: none;
+    align-items: center;
     display: flex;
     gap: 45px;
 
@@ -76,7 +77,7 @@ body{
 }
 .home-page {
     height: 90vh;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.301)), url('images/homepage.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.089), rgba(0, 0, 0, 0.301)), url('images/homepage.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,7 +101,6 @@ body{
     outline: none;
     transition: border-color 0.3s ease, background-color 0.3s ease;
 
-    /* Search icon as background */
     background-image: url('https://cdn-icons-png.flaticon.com/512/622/622669.png');
     background-repeat: no-repeat;
     background-position: right 15px center;
@@ -132,12 +132,13 @@ body{
     font-size: 3.5rem;
     font-weight: 900;
     color: #fff;
+    -webkit-text-stroke: 1px black;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 .btn1 {
     background-color: #2c2b2b;
     color: #ffffff;
-    padding: 15px 50px;
+    padding: 12px 40px;
     position: relative;
     bottom: -50px;
     font-size: 1.25rem;
@@ -724,3 +725,31 @@ body{
     transform: scale(0.95);
     
 }
+.login-btn {
+    margin: 0 auto;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #0067c7;
+    padding: 0.6em 1.5em;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 6em;
+    transition: all 0.2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 600;
+    color:white;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+        inset 2px -2px 0 rgb(31, 128, 255);
+}
+
+.login-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 159, 187, 0.267);
+}
+
