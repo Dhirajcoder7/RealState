@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    /* Aapka diya hua CSS */
+    .container {
+      max-width: 350px;
+      background: #F8F9FD;
+      background: linear-gradient(0deg, rgb(238, 238, 238) 0%, rgba(0, 148, 216, 0.075) 100%);
+      border-radius: 40px;
+      padding: 25px 35px;
+      border: 2px solid rgb(136, 136, 136);
+      box-shadow: rgba(133, 189, 215, 0.878) 0px 30px 30px -20px;
+      margin: 10rem auto;
+    }
+    .heading {
+      text-align: center;
+      font-weight: 900;
+      font-size: 30px;
+      color: rgb(16, 137, 211);
+    }
+    .form {
+      margin-top: 20px;
+    }
+    .form .input {
+      width: 90%;
+      background: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 20px;
+      margin-top: 15px;
+      box-shadow: #919191 0px 10px 10px -5px;
+      border-inline: 2px solid transparent;
+    }
+    .form .input::placeholder {
+      color: rgb(170, 170, 170);
+    }
+    .form .input:focus {
+      outline: none;
+      border-inline: 2px solid #12B1D1;
+    }
+    .form .forgot-password {
+      display: block;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .form .forgot-password a {
+      font-size: 12px;
+      color: #0099ff;
+      text-decoration: none;
+    }
+    .form .login-button {
+      display: block;
+      width: 100%;
+      font-weight: bold;
+      background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+      color: white;
+      cursor: pointer;
+      padding-block: 15px;
+      margin: 20px auto;
+      border-radius: 20px;
+      box-shadow: rgba(145, 145, 145, 0.878) 0px 20px 10px -15px;
+      border: none;
+      transition: all 0.2s ease-in-out;
+    }
+    .form .login-button:hover {
+      transform: scale(1.03);
+      box-shadow: rgba(87, 87, 87, 0.878) 0px 23px 10px -20px;
+    }
+    .form .login-button:active {
+      transform: scale(0.95);
+      box-shadow: rgba(0, 146, 190, 0.878) 0px 15px 10px -10px;
+    }
+    .agreement {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .agreement a {
+      text-decoration: none;
+      color: #0099ff;
+      font-size: 13px;
+    }
+    .google-login-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color:black;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2.4px solid #7a7a7a;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+.form .google-login-btn:hover {
+      transform: scale(1.03);
+      box-shadow: rgba(87, 87, 87, 0.878) 0px 23px 10px -20px;
+    }
+    .form .google-login-btn:active {
+      transform: scale(0.95);
+      box-shadow: rgba(201, 201, 201, 0.878) 0px 15px 10px -10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login Form -->
+  <div class="container" id="loginContainer">
+    <h2 class="heading">Login</h2>
+    <div class="form">
+      <input type="email" id="loginEmail" class="input" placeholder="Enter Email" />
+      <input type="password" id="loginPassword" class="input" placeholder="Enter Password" />
+
+      <span class="forgot-password"><a href="#" onclick="showForgot()">Forgot Password?</a></span>
+
+      <button class="login-button" onclick="login()">Login</button>
+  
+       <button onclick="signupGoogle()" class="google-login-btn">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" x="0px" y="0px" class="google-icon"
+            viewBox="0 0 48 48" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12
+        	c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24
+        	c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path>
+            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657
+        	C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path>
+            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36
+        	c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path>
+            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571
+        	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z">
+            </path>
+        </svg>
+        <span class="google-text">Login with Google</span>
+       </button>
+        
+
+      <div class="agreement">
+        <a href="#" onclick="showSignup()">Don't have an account? Sign up</a>
+      </div> 
+    </div>
+  </div>
+
+  <!-- Signup Form -->
+  <div class="container" id="signupContainer" style="display:none;">
+    <h2 class="heading">Sign Up</h2>
+    <div class="form">
+        <input type="text" id="signupUsername" class="input" placeholder="Full Name" />
+      <input type="email" id="signupEmail" class="input" placeholder="Enter Email" />
+      <input type="password" id="signupPassword" class="input" placeholder="Password" />
+        <input type="password" id="confirmPassword" class="input" placeholder="Confirm Password" />
+      <button class="login-button" onclick="signup()">Sign Up</button>
+      <div class="agreement">
+        <a href="#" onclick="showLogin()">Already have an account? Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forgot Password -->
+  <div class="container" id="forgotContainer" style="display:none;">
+    <h2 class="heading">Reset Password</h2>
+    <div class="form">
+      <input type="email" id="forgotEmail" class="input" placeholder="Enter Registered Email" />
+      <input type="password" id="newPassword" class="input" placeholder="New Password" />
+      <button class="login-button" onclick="resetPassword()">Update Password</button>
+      <div class="agreement">
+        <a href="#" onclick="showLogin()">Back to Login</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Show/hide forms
+    function showLogin() {
+      document.getElementById("loginContainer").style.display = "block";
+      document.getElementById("signupContainer").style.display = "none";
+      document.getElementById("forgotContainer").style.display = "none";
+    }
+
+    function showSignup() {
+      document.getElementById("loginContainer").style.display = "none";
+      document.getElementById("signupContainer").style.display = "block";
+      document.getElementById("forgotContainer").style.display = "none";
+    }
+
+    function showForgot() {
+      document.getElementById("loginContainer").style.display = "none";
+      document.getElementById("signupContainer").style.display = "none";
+      document.getElementById("forgotContainer").style.display = "block";
+    }
+
+    // Signup
+    function signup() {
+            const email = document.getElementById("signupEmail").value.trim();
+            const password = document.getElementById("signupPassword").value.trim();
+            const confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+            if (!email || !password || !confirmPassword) {
+                alert("Please fill all fields");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return;
+            }
+
+            // Get existing users from localStorage
+            let users = JSON.parse(localStorage.getItem("users")) || {};
+
+            if (users[email]) {
+                alert("Account already exists with this email");
+                return;
+            }
+
+            // Save new user
+            users[email] = { password };
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Signup successful!");
+
+            // Clear form fields
+            document.getElementById("signupEmail").value = "";
+            document.getElementById("signupPassword").value = "";
+            document.getElementById("confirmPassword").value = "";
+
+            // Show login form
+            showLogin();
+        }
+
+
+    // Login
+    function login() {
+      const email = document.getElementById("loginEmail").value.trim();
+      const password = document.getElementById("loginPassword").value.trim();
+      const storedPassword = localStorage.getItem(email);
+
+      if (storedPassword === null) {
+        alert("User not found. Please sign up first.");
+      } else if (storedPassword === password) {
+        alert("Login successful!");
+      } else {
+        alert("Incorrect password!");
+      }
+    }
+
+    // Reset password
+    function resetPassword() {
+      const email = document.getElementById("forgotEmail").value.trim();
+      const newPassword = document.getElementById("newPassword").value.trim();
+
+      if (!email || !newPassword) {
+        alert("Please fill all fields");
+        return;
+      }
+
+      if (localStorage.getItem(email) === null) {
+        alert("User not found!");
+        return;
+      }
+
+      localStorage.setItem(email, newPassword);
+      alert("Password updated successfully!");
+      showLogin();
+    }
+    
+  </script>
+
+</body>
+</html>
