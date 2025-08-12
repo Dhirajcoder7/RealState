@@ -9,20 +9,39 @@
 html {
     scroll-behavior: smooth;
 }
-body{
-    background: linear-gradient(to bottom, rgba(1, 0, 31, 0.514), rgba(5, 13, 24, 0.274)),
-            url('images/about.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed ;
-        
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100vh;
 }
+
+/* Pseudo-element for background image + gradient */
+body::before {
+    content: "";
+    position: fixed;      /* fixed to viewport */
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    
+    /* background gradient + image */
+    background:
+        linear-gradient(to bottom, rgba(1, 0, 31, 0.514), rgba(0, 1, 3, 0.274)),
+        url('images/about.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    /* Only saturation increased here */
+    filter: saturate(1.9); /* Adjust this value as needed */
+
+    z-index: -1;           /* behind all content */
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    padding: 5px 30px;
     background-color: #ffffff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
