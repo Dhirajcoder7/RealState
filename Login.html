@@ -5,15 +5,21 @@
   <title>Login System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
+    body{
+      font-family: Arial, sans-serif;
+      background-color: #050022;
+      margin: 0;
+      padding: 0;
+    }
     /* Aapka diya hua CSS */
     .container {
-      max-width: 350px;
+      max-width: 310px;
       background: #F8F9FD;
-      background: linear-gradient(0deg, rgb(238, 238, 238) 0%, rgba(0, 148, 216, 0.075) 100%);
-      border-radius: 40px;
+      background: linear-gradient(0deg, rgb(230, 230, 230) 0%, rgb(240, 240, 240) 100%);
+      border-radius: 20px;
       padding: 25px 35px;
       border: 2px solid rgb(136, 136, 136);
-      box-shadow: rgba(133, 189, 215, 0.878) 0px 30px 30px -20px;
+      box-shadow:0px 0px 5px rgb(255, 255, 255);
       margin: 10rem auto;
     }
     .heading {
@@ -175,102 +181,7 @@
     </div>
   </div>
 
-  <script>
-    // Show/hide forms
-    function showLogin() {
-      document.getElementById("loginContainer").style.display = "block";
-      document.getElementById("signupContainer").style.display = "none";
-      document.getElementById("forgotContainer").style.display = "none";
-    }
-
-    function showSignup() {
-      document.getElementById("loginContainer").style.display = "none";
-      document.getElementById("signupContainer").style.display = "block";
-      document.getElementById("forgotContainer").style.display = "none";
-    }
-
-    function showForgot() {
-      document.getElementById("loginContainer").style.display = "none";
-      document.getElementById("signupContainer").style.display = "none";
-      document.getElementById("forgotContainer").style.display = "block";
-    }
-
-    // Signup
-    function signup() {
-            const email = document.getElementById("signupEmail").value.trim();
-            const password = document.getElementById("signupPassword").value.trim();
-            const confirmPassword = document.getElementById("confirmPassword").value.trim();
-
-            if (!email || !password || !confirmPassword) {
-                alert("Please fill all fields");
-                return;
-            }
-
-            if (password !== confirmPassword) {
-                alert("Passwords do not match");
-                return;
-            }
-
-            // Get existing users from localStorage
-            let users = JSON.parse(localStorage.getItem("users")) || {};
-
-            if (users[email]) {
-                alert("Account already exists with this email");
-                return;
-            }
-
-            // Save new user
-            users[email] = { password };
-            localStorage.setItem("users", JSON.stringify(users));
-
-            alert("Signup successful!");
-
-            // Clear form fields
-            document.getElementById("signupEmail").value = "";
-            document.getElementById("signupPassword").value = "";
-            document.getElementById("confirmPassword").value = "";
-
-            // Show login form
-            showLogin();
-        }
-
-
-    // Login
-    function login() {
-      const email = document.getElementById("loginEmail").value.trim();
-      const password = document.getElementById("loginPassword").value.trim();
-      const storedPassword = localStorage.getItem(email);
-
-      if (storedPassword === null) {
-        alert("User not found. Please sign up first.");
-      } else if (storedPassword === password) {
-        alert("Login successful!");
-      } else {
-        alert("Incorrect password!");
-      }
-    }
-
-    // Reset password
-    function resetPassword() {
-      const email = document.getElementById("forgotEmail").value.trim();
-      const newPassword = document.getElementById("newPassword").value.trim();
-
-      if (!email || !newPassword) {
-        alert("Please fill all fields");
-        return;
-      }
-
-      if (localStorage.getItem(email) === null) {
-        alert("User not found!");
-        return;
-      }
-
-      localStorage.setItem(email, newPassword);
-      alert("Password updated successfully!");
-      showLogin();
-    }
-    
-  </script>
+  <script src="login.js"></script>
 
 </body>
 </html>
