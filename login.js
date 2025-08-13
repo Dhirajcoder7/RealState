@@ -40,12 +40,10 @@ function showForgot() {
     alert("Please enter a valid Gmail address (e.g., example@gmail.com)");
     return;
   }
-
   if (password !== confirmPassword) {
     alert("Passwords do not match");
     return;
   }
-
   const email = emailInput.toLowerCase();
 
   let users = JSON.parse(localStorage.getItem("users")) || {};
@@ -78,6 +76,8 @@ function login() {
 
     if (!users[email]) {
         alert("User not found. Please sign up first.");
+        document.getElementById("loginEmail").value='';
+        document.getElementById("loginPassword").value='';
         return;
     }
 
@@ -88,6 +88,8 @@ function login() {
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("loggedInUser", email); // store email
         localStorage.setItem("loggedInName", users[email].username); // store name
+        localStorage.setItem("loggedInEmail", email); // correct email key
+
 
         document.getElementById("loginEmail").value = "";
         document.getElementById("loginPassword").value = "";
@@ -97,9 +99,6 @@ function login() {
         alert("Incorrect password!");
     }
 }
-
-
-
 
   // Reset password
 function resetPassword() {
@@ -126,8 +125,6 @@ function resetPassword() {
   alert("Password updated successfully!");
   showLogin();
 }
-
-
 
 // --------user login info display--------
 
@@ -163,10 +160,66 @@ function logout() {
 
 // ----- Login User info ------
 
-Upage.document.getElementById('Upage');
+
 function Showuser() {
-  Upage.style.display = 'block';  
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const userName   = localStorage.getItem("loggedInName");
+
+  const userEmail  = localStorage.getItem("loggedInEmail") || localStorage.getItem("loggedInUser") || "";
+
+  if (isLoggedIn !== "true" || !userName) {
+    alert("Please login first");
+    return;
+  }
+
+  // Avatar inside popup
+  const parts = userName.trim().split(" ");
+  const first = (parts[0] || "").charAt(0).toUpperCase();
+  const second = parts.length > 1 ? (parts[1] || "").charAt(0).toUpperCase() : "";
+  const initials = (first + second) || first;
+
+  const popupAv = document.getElementById("popupAvatar");
+  if (popupAv) popupAv.textContent = initials;
+
+  const nameEl  = document.getElementById("UserName"); 
+  const emailEl = document.getElementById("UserEmail");
+  if (nameEl)  nameEl.textContent  = userName;
+  if (emailEl) emailEl.textContent = userEmail;
+
+  const card = document.getElementById("Upage");
+  if (card) card.style.display = "block";
 }
 function Hideuser() {
-  Upage.style.display = 'none';
+  document.getElementById("Upage").style.display = "none";
 }
+
+// On page load
+window.onload = function() {
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const userName   = localStorage.getItem("loggedInName");
+  // fallback: loggedInEmail first, else loggedInUser
+  const userEmail  = localStorage.getItem("loggedInEmail") || localStorage.getItem("loggedInUser") || "";
+
+  if (isLoggedIn === "true" && userName) {
+    const loginBtn = document.getElementById("loginBtnItem");
+    if (loginBtn) loginBtn.style.display = "none";
+
+    const userInfo = document.getElementById("userInfo");
+    if (userInfo) userInfo.style.display = "block";
+
+    // Top avatar initials
+    const parts = userName.trim().split(" ");
+    const first = (parts[0] || "").charAt(0).toUpperCase();
+    const second = parts.length > 1 ? (parts[1] || "").charAt(0).toUpperCase() : "";
+    const initials = (first + second) || first;
+
+    const topAv = document.getElementById("userAvatar");
+    if (topAv) topAv.textContent = initials;
+
+    const nameEl  = document.getElementById("UserName"); 
+    const emailEl = document.getElementById("UserEmail");
+    if (nameEl)  nameEl.textContent  = userName;
+    if (emailEl) emailEl.textContent = userEmail;
+  }
+};
+
