@@ -154,7 +154,6 @@ body::before {
   font-size: 3.5rem;
   font-weight: 900;
   color: #fff;
-  -webkit-text-stroke: 1px black;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 .btn1 {
@@ -910,3 +909,4 @@ body::before {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 159, 187, 0.267);
 }
+
